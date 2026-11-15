@@ -1,0 +1,21 @@
+# Render Blueprint: one Docker web service (backend serves the frontend). NOT deployed or tested by the author.
+# Free instances sleep after inactivity and have an ephemeral disk: SQLite data (saved fields, accounts) is LOST on restart/redeploy.
+services:
+  - type: web
+    name: fieldshift
+    runtime: docker
+    plan: free
+    healthCheckPath: /readyz
+    envVars:
+      - key: FIELDSHIFT_ENV
+        value: production
+      - key: FIELDSHIFT_SECRET_KEY
+        generateValue: true
+      - key: FIELDSHIFT_COOKIE_SECURE
+        value: "true"
+      - key: FIELDSHIFT_CORS_ORIGINS
+        value: https://fieldshift.onrender.com   # change to your real onrender.com URL after the first deploy
+      - key: FIELDSHIFT_DB
+        value: /data/fieldshift.db
+      - key: DATA_GOV_IN_API_KEY
+        sync: false

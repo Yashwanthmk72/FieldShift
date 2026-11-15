@@ -1,0 +1,74 @@
+[
+ {
+  "id": "nasa_power",
+  "provider": "NASA POWER",
+  "data_type": "Daily weather (T2M, rain, root-zone wetness, solar) and monthly climatology",
+  "kind": "observed / climatology",
+  "coverage": "Global, ~0.5° grid",
+  "update": "Daily, lags a few days",
+  "licence": "NASA open data; acknowledge the POWER project",
+  "limits": "Gridded, not a field sensor; ~50 km cell",
+  "attribution": "NASA Langley Research Center POWER Project",
+  "url": "https://power.larc.nasa.gov/"
+ },
+ {
+  "id": "soilgrids",
+  "provider": "ISRIC SoilGrids 2.0",
+  "data_type": "pH, SOC, clay, sand, silt (0-30 cm weighted)",
+  "kind": "modelled",
+  "coverage": "Global land, 250 m; gaps over water, ice and some built-up areas",
+  "update": "Static model release",
+  "licence": "CC BY 4.0 (verify before redistribution)",
+  "limits": "Modelled estimates; no N/P/K or salinity; public API rate limits",
+  "attribution": "ISRIC - World Soil Information",
+  "url": "https://www.isric.org/explore/soilgrids"
+ },
+ {
+  "id": "open_meteo",
+  "provider": "Open-Meteo",
+  "data_type": "Forecast (up to 16 days), ET0, hourly humidity",
+  "kind": "forecast",
+  "coverage": "Global",
+  "update": "Hourly model updates; cached 30 min",
+  "licence": "CC BY 4.0; free tier is non-commercial (verify terms)",
+  "limits": "Forecast skill falls with lead time",
+  "attribution": "Weather data by Open-Meteo.com",
+  "url": "https://open-meteo.com/"
+ },
+ {
+  "id": "nominatim",
+  "provider": "OpenStreetMap Nominatim",
+  "data_type": "Place search",
+  "kind": "observed",
+  "coverage": "Global",
+  "update": "Continuous",
+  "licence": "ODbL",
+  "limits": "Max 1 request/second; identify the app with a User-Agent",
+  "attribution": "© OpenStreetMap contributors",
+  "url": "https://nominatim.org/"
+ },
+ {
+  "id": "wikimedia",
+  "provider": "Wikimedia Commons",
+  "data_type": "Crop images",
+  "kind": "n/a",
+  "coverage": "Global",
+  "update": "Continuous",
+  "licence": "Per-file licence shown with each image",
+  "limits": "Images may be unavailable",
+  "attribution": "Author and licence shown per image",
+  "url": "https://commons.wikimedia.org/"
+ },
+ {
+  "id": "fao56",
+  "provider": "FAO Irrigation and Drainage Paper 56",
+  "data_type": "Crop coefficients (Kc) and growth-stage lengths",
+  "kind": "reference",
+  "coverage": "Global guidance",
+  "update": "1998",
+  "licence": "FAO publication; cited, not redistributed",
+  "limits": "Kc ini uses FAO group values; some crops use proxy stage rows (flagged in crops.json)",
+  "attribution": "Allen et al. (1998), FAO",
+  "url": "https://www.fao.org/4/x0490e/x0490e00.htm"
+ }
+]

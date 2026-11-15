@@ -1,0 +1,2234 @@
+{
+ "schema_version": 2,
+ "retrieved": "2026-11-14",
+ "note": "Agronomic ranges are heuristics and are labelled as such. Only Kc and stage fractions of 9 original crops carry a verified FAO-56 source. The 16 crops added in v0.7 are ALL heuristic: Kc and stage values were recalled from FAO-56 and not re-verified. Every parameter has a url saying where to verify it. Set status to 'sourced' only after checking the value against that source. 'perennial': true marks crops that do not fit a season-by-season rotation.",
+ "crops": [
+  {
+   "id": "maize",
+   "name": "Maize",
+   "family": "Grass",
+   "season": "Warm season",
+   "water": "Medium–high",
+   "temp": [
+    18,
+    32
+   ],
+   "rain": [
+    450,
+    900
+   ],
+   "ph": [
+    5.5,
+    7.5
+   ],
+   "soil": "Well-drained loam",
+   "fixer": false,
+   "resilience": 65,
+   "description": "A versatile staple grain for warm growing seasons. Maize performs best in fertile, well-drained soils with reliable moisture during flowering and grain fill. Rotate with legumes to replenish nitrogen and break pest cycles.",
+   "uses": "Food, livestock feed, silage and bio-based products.",
+   "image_query": "maize corn field",
+   "kc": {
+    "ini": 0.3,
+    "mid": 1.2,
+    "end": 0.475
+   },
+   "stage_fraction": {
+    "ini": 0.16,
+    "dev": 0.28,
+    "mid": 0.32,
+    "late": 0.24
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+     "note": "end printed as 0.60-0.35 (grain moisture at harvest); midpoint used; Kc ini is the FAO-56 group header value (cereals 0.3 / legumes 0.4), not a per-crop printed value"
+    },
+    "stage_fraction": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - row: Nigeria (humid), June planting (20/35/40/30 days)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "sorghum",
+   "name": "Sorghum",
+   "family": "Grass",
+   "season": "Warm season",
+   "water": "Low",
+   "temp": [
+    20,
+    35
+   ],
+   "rain": [
+    300,
+    700
+   ],
+   "ph": [
+    5.5,
+    8.5
+   ],
+   "soil": "Adaptable; tolerates drier soils",
+   "fixer": false,
+   "resilience": 94,
+   "description": "A heat- and drought-tolerant grain suited to dryland farming. Sorghum can produce grain or forage with less water than many cereals and is a strong option where rainfall is variable.",
+   "uses": "Food, animal feed, forage and bioenergy.",
+   "image_query": "sorghum crop field",
+   "kc": {
+    "ini": 0.3,
+    "mid": 1.05,
+    "end": 0.55
+   },
+   "stage_fraction": {
+    "ini": 0.16,
+    "dev": 0.28,
+    "mid": 0.32,
+    "late": 0.24
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+     "note": "mid printed as 1.00-1.10; midpoint used; Kc ini is the FAO-56 group header value (cereals 0.3 / legumes 0.4), not a per-crop printed value"
+    },
+    "stage_fraction": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - row: USA/Pakistan/Mediterranean, May-June (20/35/40/30 days)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "millet",
+   "name": "Pearl millet",
+   "family": "Grass",
+   "season": "Warm season",
+   "water": "Very low",
+   "temp": [
+    25,
+    35
+   ],
+   "rain": [
+    250,
+    600
+   ],
+   "ph": [
+    5,
+    8
+   ],
+   "soil": "Sandy, low-fertility soils",
+   "fixer": false,
+   "resilience": 96,
+   "description": "A hardy cereal adapted to hot, dry environments and sandy soils. Pearl millet has a short growing cycle and can provide dependable grain and fodder where other crops struggle.",
+   "uses": "Human food, fodder and dryland rotations.",
+   "image_query": "pearl millet field",
+   "kc": {
+    "ini": 0.3,
+    "mid": 1.0,
+    "end": 0.3
+   },
+   "stage_fraction": {
+    "ini": 0.143,
+    "dev": 0.238,
+    "mid": 0.381,
+    "late": 0.238
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+     "note": "Kc ini is the FAO-56 group header value (cereals 0.3 / legumes 0.4), not a per-crop printed value"
+    },
+    "stage_fraction": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - row: Pakistan, June (15/25/40/25 days)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "soybean",
+   "name": "Soybean",
+   "family": "Legume",
+   "season": "Warm season",
+   "water": "Medium",
+   "temp": [
+    20,
+    30
+   ],
+   "rain": [
+    450,
+    800
+   ],
+   "ph": [
+    6,
+    7.5
+   ],
+   "soil": "Fertile, well-drained loam",
+   "fixer": true,
+   "resilience": 72,
+   "description": "A protein-rich legume that can add biologically fixed nitrogen to a rotation. Soybean needs good drainage and adequate moisture during pod formation; inoculation and local variety choice matter.",
+   "uses": "Food, oil, feed and nitrogen-building rotations.",
+   "image_query": "soybean field",
+   "kc": {
+    "ini": 0.4,
+    "mid": 1.15,
+    "end": 0.5
+   },
+   "stage_fraction": {
+    "ini": 0.176,
+    "dev": 0.176,
+    "mid": 0.471,
+    "late": 0.176
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+     "note": "Kc ini is the FAO-56 group header value (cereals 0.3 / legumes 0.4), not a per-crop printed value"
+    },
+    "stage_fraction": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - row: Tropics, December (15/15/40/15 days)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "cowpea",
+   "name": "Cowpea",
+   "family": "Legume",
+   "season": "Warm season",
+   "water": "Low",
+   "temp": [
+    22,
+    35
+   ],
+   "rain": [
+    300,
+    700
+   ],
+   "ph": [
+    5.5,
+    7.5
+   ],
+   "soil": "Adaptable; tolerates sandy soils",
+   "fixer": true,
+   "resilience": 91,
+   "description": "A heat-tolerant pulse that fixes nitrogen and is well suited to many semi-arid regions. Cowpea can be grown for grain, leaves or fodder and fits well before a cereal crop.",
+   "uses": "Pulse, leafy vegetable, fodder and soil-improving rotation.",
+   "image_query": "cowpea field",
+   "kc": {
+    "ini": 0.4,
+    "mid": 1.05,
+    "end": 0.475
+   },
+   "stage_fraction": {
+    "ini": 0.158,
+    "dev": 0.263,
+    "mid": 0.368,
+    "late": 0.211
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+     "note": "row 'Green gram and cowpeas'; end printed as 0.60-0.35; midpoint used; Kc ini is the FAO-56 group header value (cereals 0.3 / legumes 0.4), not a per-crop printed value"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - row: PROXY: dry beans, Pakistan/California (cowpea not listed in Table 11) (15/25/35/20 days)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "rice",
+   "name": "Rice",
+   "family": "Grass",
+   "season": "Warm season",
+   "water": "High",
+   "temp": [
+    20,
+    35
+   ],
+   "rain": [
+    1000,
+    2000
+   ],
+   "ph": [
+    5.5,
+    7
+   ],
+   "soil": "Clay or water-retentive soils",
+   "fixer": false,
+   "resilience": 48,
+   "description": "A major staple that can be grown in irrigated or rain-fed systems. Rice requires careful water planning; alternate wetting and drying may reduce water use where local conditions and extension guidance support it.",
+   "uses": "Staple grain and straw for livestock or mulch.",
+   "image_query": "rice paddy field",
+   "kc": {
+    "ini": 1.05,
+    "mid": 1.2,
+    "end": 0.75
+   },
+   "stage_fraction": {
+    "ini": 0.2,
+    "dev": 0.2,
+    "mid": 0.4,
+    "late": 0.2
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+     "note": "end printed as 0.90-0.60; midpoint used"
+    },
+    "stage_fraction": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - row: Tropics, May (30/30/60/30 days)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "groundnut",
+   "name": "Groundnut",
+   "family": "Legume",
+   "season": "Warm season",
+   "water": "Low–medium",
+   "temp": [
+    22,
+    32
+   ],
+   "rain": [
+    400,
+    800
+   ],
+   "ph": [
+    5.8,
+    7
+   ],
+   "soil": "Loose, well-drained sandy loam",
+   "fixer": true,
+   "resilience": 78,
+   "description": "A valuable oilseed pulse that fixes nitrogen and grows well in warm climates. Loose, calcium-rich soil helps pod development, and dry weather near harvest supports quality.",
+   "uses": "Food, edible oil, animal feed and rotation nitrogen.",
+   "image_query": "groundnut peanut field",
+   "kc": {
+    "ini": 0.4,
+    "mid": 1.15,
+    "end": 0.6
+   },
+   "stage_fraction": {
+    "ini": 0.192,
+    "dev": 0.269,
+    "mid": 0.346,
+    "late": 0.192
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+     "note": "Kc ini is the FAO-56 group header value (cereals 0.3 / legumes 0.4), not a per-crop printed value"
+    },
+    "stage_fraction": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - row: West Africa, dry season (25/35/45/25 days)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "chickpea",
+   "name": "Chickpea",
+   "family": "Legume",
+   "season": "Cool season",
+   "water": "Low",
+   "temp": [
+    10,
+    30
+   ],
+   "rain": [
+    300,
+    650
+   ],
+   "ph": [
+    6,
+    8
+   ],
+   "soil": "Well-drained loam; avoid waterlogging",
+   "fixer": true,
+   "resilience": 83,
+   "description": "A cool-season pulse valued for protein and relatively modest water needs. Chickpea fixes nitrogen and works well after cereals, but is sensitive to waterlogging and some diseases.",
+   "uses": "Food pulse, export crop and soil-improving rotation.",
+   "image_query": "chickpea crop field",
+   "kc": {
+    "ini": 0.4,
+    "mid": 1.0,
+    "end": 0.35
+   },
+   "stage_fraction": {
+    "ini": 0.158,
+    "dev": 0.263,
+    "mid": 0.368,
+    "late": 0.211
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+     "note": "Kc ini is the FAO-56 group header value (cereals 0.3 / legumes 0.4), not a per-crop printed value"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - row: PROXY: dry beans (chickpea not listed in Table 11) (15/25/35/20 days)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "wheat",
+   "name": "Wheat",
+   "family": "Grass",
+   "season": "Cool season",
+   "water": "Medium",
+   "temp": [
+    10,
+    25
+   ],
+   "rain": [
+    350,
+    900
+   ],
+   "ph": [
+    6,
+    7.5
+   ],
+   "soil": "Deep, fertile loam",
+   "fixer": false,
+   "resilience": 61,
+   "description": "A widely grown cool-season cereal. Wheat benefits from fertile soils and well-timed moisture; include a legume break crop to diversify rotations and support soil fertility.",
+   "uses": "Flour, food, feed and straw.",
+   "image_query": "wheat field",
+   "kc": {
+    "ini": 0.3,
+    "mid": 1.15,
+    "end": 0.325
+   },
+   "stage_fraction": {
+    "ini": 0.148,
+    "dev": 0.185,
+    "mid": 0.444,
+    "late": 0.222
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+     "note": "spring wheat row; end printed as 0.25-0.40; midpoint used; Kc ini is the FAO-56 group header value (cereals 0.3 / legumes 0.4), not a per-crop printed value"
+    },
+    "stage_fraction": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - row: 35-45 deg latitude, March-April (20/25/60/30 days)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "potato",
+   "name": "Potato",
+   "family": "Tuber",
+   "season": "Cool season",
+   "water": "Medium–high",
+   "temp": [
+    10,
+    24
+   ],
+   "rain": [
+    500,
+    1000
+   ],
+   "ph": [
+    5,
+    6.5
+   ],
+   "soil": "Loose, well-drained soil",
+   "fixer": false,
+   "resilience": 55,
+   "description": "A productive tuber crop for cool conditions. Potatoes need loose soil and steady moisture, and benefit from careful disease management and rotation away from other nightshades.",
+   "uses": "Food, processing and market gardening.",
+   "image_query": "potato field crop",
+   "kc": {
+    "ini": 0.5,
+    "mid": 1.15,
+    "end": 0.75
+   },
+   "stage_fraction": {
+    "ini": 0.192,
+    "dev": 0.231,
+    "mid": 0.346,
+    "late": 0.231
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - mid/end printed; Kc ini is a group value recalled from memory and not re-verified this session",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+     "note": ""
+    },
+    "stage_fraction": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - row: Continental climate, May (25/30/45/30 days)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "sunflower",
+   "name": "Sunflower",
+   "family": "Oilseed",
+   "season": "Warm season",
+   "water": "Low–medium",
+   "temp": [
+    18,
+    32
+   ],
+   "rain": [
+    300,
+    700
+   ],
+   "ph": [
+    6,
+    7.5
+   ],
+   "soil": "Deep, well-drained soil",
+   "fixer": false,
+   "resilience": 80,
+   "description": "An oilseed crop with a deep root system and good drought tolerance once established. Sunflower can add diversity to cereal rotations and supports pollinators when flowering.",
+   "uses": "Edible oil, seed, bird feed and pollinator habitat.",
+   "image_query": "sunflower field",
+   "kc": {
+    "ini": 0.35,
+    "mid": 1.075,
+    "end": 0.35
+   },
+   "stage_fraction": {
+    "ini": 0.192,
+    "dev": 0.269,
+    "mid": 0.346,
+    "late": 0.192
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "FieldShift v0.4 crop guide (unreviewed). Cross-check against FAO EcoCrop / local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - mid/end printed; Kc ini is a group value recalled from memory and not re-verified this session",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+     "note": "mid printed as 1.0-1.15; midpoint used"
+    },
+    "stage_fraction": {
+     "status": "sourced",
+     "source": "FAO Irrigation and Drainage Paper 56 (Allen et al., 1998), Table 12 (Kc) and Table 11 (stage lengths) - row: Mediterranean/California, April-May (25/35/45/25 days)",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "barley",
+   "name": "Barley",
+   "family": "Grass",
+   "season": "Cool season",
+   "water": "Low–medium",
+   "temp": [
+    8,
+    22
+   ],
+   "rain": [
+    300,
+    750
+   ],
+   "ph": [
+    6,
+    8
+   ],
+   "soil": "Well-drained loam; tolerates saline and alkaline soils better than wheat",
+   "fixer": false,
+   "resilience": 76,
+   "description": "A fast-maturing cool-season cereal that copes with drier and saltier land than wheat. Useful for feed, malting and food.",
+   "uses": "Livestock feed, malting, food grain.",
+   "image_query": "barley field",
+   "kc": {
+    "ini": 0.3,
+    "mid": 1.15,
+    "end": 0.25
+   },
+   "stage_fraction": {
+    "ini": 0.148,
+    "dev": 0.185,
+    "mid": 0.444,
+    "late": 0.223
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "cassava",
+   "name": "Cassava",
+   "family": "Tuber",
+   "season": "Warm season",
+   "water": "Low–medium",
+   "temp": [
+    20,
+    30
+   ],
+   "rain": [
+    800,
+    1800
+   ],
+   "ph": [
+    5.5,
+    7
+   ],
+   "soil": "Light, well-drained sandy loam",
+   "fixer": false,
+   "resilience": 88,
+   "description": "A drought-tolerant root crop for warm climates that keeps well in the ground as a food reserve. Needs a long, frost-free season.",
+   "uses": "Food (roots, flour), starch, animal feed.",
+   "image_query": "cassava field plants",
+   "kc": {
+    "ini": 0.3,
+    "mid": 0.8,
+    "end": 0.3
+   },
+   "stage_fraction": {
+    "ini": 0.095,
+    "dev": 0.19,
+    "mid": 0.429,
+    "late": 0.286
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "sweet_potato",
+   "name": "Sweet potato",
+   "family": "Tuber",
+   "season": "Warm season",
+   "water": "Medium",
+   "temp": [
+    20,
+    30
+   ],
+   "rain": [
+    750,
+    1500
+   ],
+   "ph": [
+    5.5,
+    6.5
+   ],
+   "soil": "Loose, well-drained sandy loam",
+   "fixer": false,
+   "resilience": 70,
+   "description": "A quick-growing vine crop whose storage roots and leaves are both eaten. Dislikes waterlogging and heavy clay.",
+   "uses": "Food (roots and leaves), animal feed.",
+   "image_query": "sweet potato field",
+   "kc": {
+    "ini": 0.5,
+    "mid": 1.15,
+    "end": 0.65
+   },
+   "stage_fraction": {
+    "ini": 0.133,
+    "dev": 0.2,
+    "mid": 0.4,
+    "late": 0.267
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "lentil",
+   "name": "Lentil",
+   "family": "Legume",
+   "season": "Cool season",
+   "water": "Low",
+   "temp": [
+    10,
+    25
+   ],
+   "rain": [
+    300,
+    600
+   ],
+   "ph": [
+    6,
+    8
+   ],
+   "soil": "Well-drained loam; avoid waterlogging",
+   "fixer": true,
+   "resilience": 75,
+   "description": "A cool-season pulse that fixes nitrogen and suits drier, well-drained fields. Weak competitor against weeds early on.",
+   "uses": "Food (dal, soups), protein-rich rotation crop.",
+   "image_query": "lentil crop field",
+   "kc": {
+    "ini": 0.4,
+    "mid": 1.1,
+    "end": 0.3
+   },
+   "stage_fraction": {
+    "ini": 0.133,
+    "dev": 0.2,
+    "mid": 0.4,
+    "late": 0.267
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "pigeonpea",
+   "name": "Pigeon pea",
+   "family": "Legume",
+   "season": "Warm season",
+   "water": "Low",
+   "temp": [
+    20,
+    32
+   ],
+   "rain": [
+    600,
+    1000
+   ],
+   "ph": [
+    5,
+    7.5
+   ],
+   "soil": "Well-drained loam; deep roots tolerate dry spells",
+   "fixer": true,
+   "resilience": 88,
+   "description": "A deep-rooted, drought-hardy pulse that fixes nitrogen and is often intercropped with cereals. Long duration in many varieties.",
+   "uses": "Food (dal), fodder, fuelwood stalks.",
+   "image_query": "pigeon pea field",
+   "kc": {
+    "ini": 0.4,
+    "mid": 1.1,
+    "end": 0.35
+   },
+   "stage_fraction": {
+    "ini": 0.15,
+    "dev": 0.25,
+    "mid": 0.4,
+    "late": 0.2
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Pulse-group proxy values recalled from FAO-56; pigeon pea has no printed row. NOT verified; heuristic.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Pulse-group proxy values recalled from FAO-56; pigeon pea has no printed row. NOT verified; heuristic.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "mungbean",
+   "name": "Mung bean",
+   "family": "Legume",
+   "season": "Warm season",
+   "water": "Low",
+   "temp": [
+    22,
+    35
+   ],
+   "rain": [
+    350,
+    700
+   ],
+   "ph": [
+    6,
+    7.5
+   ],
+   "soil": "Well-drained sandy loam to loam",
+   "fixer": true,
+   "resilience": 80,
+   "description": "A short-season pulse that fixes nitrogen and fits well between cereal crops. Sensitive to waterlogging and cold.",
+   "uses": "Food (whole grain, sprouts, dal).",
+   "image_query": "mung bean green gram field",
+   "kc": {
+    "ini": 0.4,
+    "mid": 1.05,
+    "end": 0.475
+   },
+   "stage_fraction": {
+    "ini": 0.2,
+    "dev": 0.3,
+    "mid": 0.3,
+    "late": 0.2
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "mustard",
+   "name": "Mustard / rapeseed",
+   "family": "Oilseed",
+   "season": "Cool season",
+   "water": "Low–medium",
+   "temp": [
+    10,
+    25
+   ],
+   "rain": [
+    300,
+    700
+   ],
+   "ph": [
+    5.5,
+    7.5
+   ],
+   "soil": "Well-drained loam",
+   "fixer": false,
+   "resilience": 66,
+   "description": "A cool-season oilseed grown for oil and meal. Needs adequate moisture at flowering and sulphur on poor soils.",
+   "uses": "Edible oil, meal for livestock, condiment seed.",
+   "image_query": "mustard rapeseed field yellow flowers",
+   "kc": {
+    "ini": 0.35,
+    "mid": 1.075,
+    "end": 0.35
+   },
+   "stage_fraction": {
+    "ini": 0.148,
+    "dev": 0.185,
+    "mid": 0.444,
+    "late": 0.223
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "sesame",
+   "name": "Sesame",
+   "family": "Oilseed",
+   "season": "Warm season",
+   "water": "Low",
+   "temp": [
+    24,
+    35
+   ],
+   "rain": [
+    400,
+    800
+   ],
+   "ph": [
+    5.5,
+    8
+   ],
+   "soil": "Light, well-drained soils",
+   "fixer": false,
+   "resilience": 85,
+   "description": "A heat-loving, drought-tolerant oilseed that suits light soils. Very sensitive to waterlogging and to rain at harvest.",
+   "uses": "Oil, seed, tahini.",
+   "image_query": "sesame field",
+   "kc": {
+    "ini": 0.35,
+    "mid": 1.1,
+    "end": 0.25
+   },
+   "stage_fraction": {
+    "ini": 0.182,
+    "dev": 0.273,
+    "mid": 0.364,
+    "late": 0.181
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "tomato",
+   "name": "Tomato",
+   "family": "Vegetable",
+   "season": "Warm season",
+   "water": "Medium–high",
+   "temp": [
+    18,
+    28
+   ],
+   "rain": [
+    400,
+    800
+   ],
+   "ph": [
+    6,
+    7
+   ],
+   "soil": "Fertile, well-drained loam rich in organic matter",
+   "fixer": false,
+   "resilience": 40,
+   "description": "A high-value vegetable that needs steady moisture, staking and close disease scouting. Prices and yields swing widely.",
+   "uses": "Fresh market, processing (paste, sauce).",
+   "image_query": "tomato crop field",
+   "kc": {
+    "ini": 0.6,
+    "mid": 1.15,
+    "end": 0.8
+   },
+   "stage_fraction": {
+    "ini": 0.222,
+    "dev": 0.296,
+    "mid": 0.296,
+    "late": 0.186
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "onion",
+   "name": "Onion",
+   "family": "Vegetable",
+   "season": "Cool season",
+   "water": "Medium",
+   "temp": [
+    12,
+    25
+   ],
+   "rain": [
+    350,
+    750
+   ],
+   "ph": [
+    6,
+    7.5
+   ],
+   "soil": "Fertile, friable, well-drained soil",
+   "fixer": false,
+   "resilience": 45,
+   "description": "A bulb vegetable with shallow roots that needs frequent light irrigation and weed control. Storage quality depends on curing.",
+   "uses": "Fresh market, storage, processing.",
+   "image_query": "onion field",
+   "kc": {
+    "ini": 0.7,
+    "mid": 1.05,
+    "end": 0.75
+   },
+   "stage_fraction": {
+    "ini": 0.1,
+    "dev": 0.167,
+    "mid": 0.467,
+    "late": 0.266
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "okra",
+   "name": "Okra",
+   "family": "Vegetable",
+   "season": "Warm season",
+   "water": "Medium",
+   "temp": [
+    22,
+    35
+   ],
+   "rain": [
+    500,
+    1200
+   ],
+   "ph": [
+    6,
+    7
+   ],
+   "soil": "Well-drained loam",
+   "fixer": false,
+   "resilience": 62,
+   "description": "A warm-season vegetable that tolerates heat and keeps producing pods for weeks if picked often.",
+   "uses": "Fresh vegetable, processing.",
+   "image_query": "okra field",
+   "kc": {
+    "ini": 0.6,
+    "mid": 1.05,
+    "end": 0.8
+   },
+   "stage_fraction": {
+    "ini": 0.2,
+    "dev": 0.25,
+    "mid": 0.35,
+    "late": 0.2
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "No dedicated FAO-56 row recalled; vegetable-group proxy values. NOT verified; heuristic.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "No dedicated FAO-56 row recalled; vegetable-group proxy values. NOT verified; heuristic.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "chili",
+   "name": "Chili pepper",
+   "family": "Vegetable",
+   "season": "Warm season",
+   "water": "Medium",
+   "temp": [
+    20,
+    32
+   ],
+   "rain": [
+    600,
+    1250
+   ],
+   "ph": [
+    5.5,
+    7
+   ],
+   "soil": "Well-drained, fertile loam",
+   "fixer": false,
+   "resilience": 55,
+   "description": "A warm-season spice and vegetable crop that is sensitive to waterlogging, cold nights and viral diseases.",
+   "uses": "Fresh, dried spice, sauces.",
+   "image_query": "chili pepper field",
+   "kc": {
+    "ini": 0.6,
+    "mid": 1.05,
+    "end": 0.9
+   },
+   "stage_fraction": {
+    "ini": 0.208,
+    "dev": 0.292,
+    "mid": 0.333,
+    "late": 0.167
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "watermelon",
+   "name": "Watermelon",
+   "family": "Fruit",
+   "season": "Warm season",
+   "water": "Medium",
+   "temp": [
+    22,
+    32
+   ],
+   "rain": [
+    400,
+    700
+   ],
+   "ph": [
+    6,
+    7
+   ],
+   "soil": "Light, well-drained sandy loam",
+   "fixer": false,
+   "resilience": 60,
+   "description": "A sprawling warm-season fruit crop that likes sandy soil, full sun and moisture during fruit set.",
+   "uses": "Fresh fruit, seed.",
+   "image_query": "watermelon field",
+   "kc": {
+    "ini": 0.4,
+    "mid": 1.0,
+    "end": 0.75
+   },
+   "stage_fraction": {
+    "ini": 0.182,
+    "dev": 0.273,
+    "mid": 0.273,
+    "late": 0.272
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "cotton",
+   "name": "Cotton",
+   "family": "Fibre & sugar",
+   "season": "Warm season",
+   "water": "Medium",
+   "temp": [
+    21,
+    35
+   ],
+   "rain": [
+    500,
+    1000
+   ],
+   "ph": [
+    5.5,
+    8
+   ],
+   "soil": "Deep, well-drained loam or clay loam",
+   "fixer": false,
+   "resilience": 66,
+   "description": "A long-season fibre crop that needs a warm, frost-free period and dry weather at boll opening. Heavy pest pressure in many regions.",
+   "uses": "Fibre (lint), seed oil, cake.",
+   "image_query": "cotton field",
+   "kc": {
+    "ini": 0.35,
+    "mid": 1.175,
+    "end": 0.6
+   },
+   "stage_fraction": {
+    "ini": 0.154,
+    "dev": 0.256,
+    "mid": 0.308,
+    "late": 0.282
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   }
+  },
+  {
+   "id": "sugarcane",
+   "name": "Sugarcane",
+   "family": "Fibre & sugar",
+   "season": "Warm season",
+   "water": "High",
+   "temp": [
+    22,
+    32
+   ],
+   "rain": [
+    1100,
+    1800
+   ],
+   "ph": [
+    6,
+    7.5
+   ],
+   "soil": "Deep, fertile, well-drained loam",
+   "fixer": false,
+   "resilience": 42,
+   "description": "A tall perennial grass grown for sugar, usually as a 12–18 month crop with ratoon regrowth. Needs plenty of water and a nearby mill.",
+   "uses": "Sugar, ethanol, jaggery, bagasse.",
+   "image_query": "sugarcane field",
+   "kc": {
+    "ini": 0.4,
+    "mid": 1.25,
+    "end": 0.75
+   },
+   "stage_fraction": {
+    "ini": 0.104,
+    "dev": 0.146,
+    "mid": 0.458,
+    "late": 0.292
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   },
+   "perennial": true
+  },
+  {
+   "id": "banana",
+   "name": "Banana",
+   "family": "Fruit",
+   "season": "Warm season",
+   "water": "High",
+   "temp": [
+    22,
+    32
+   ],
+   "rain": [
+    1200,
+    2200
+   ],
+   "ph": [
+    5.5,
+    7
+   ],
+   "soil": "Deep, fertile, well-drained loam; wind-sheltered",
+   "fixer": false,
+   "resilience": 35,
+   "description": "A tropical perennial fruit crop that needs steady water, warmth and shelter from wind. Cropping runs over several years.",
+   "uses": "Fresh fruit, cooking bananas, processing.",
+   "image_query": "banana plantation",
+   "kc": {
+    "ini": 0.5,
+    "mid": 1.1,
+    "end": 1.0
+   },
+   "stage_fraction": {
+    "ini": 0.308,
+    "dev": 0.231,
+    "mid": 0.308,
+    "late": 0.153
+   },
+   "provenance": {
+    "temp": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "rain": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "ph": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "water": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "resilience": {
+     "status": "heuristic",
+     "source": "FieldShift editorial score of drought/heat tolerance (0-100). Not a measured quantity."
+    },
+    "soil": {
+     "status": "heuristic",
+     "source": "Author estimate (not verified in v0.7). Cross-check against FAO EcoCrop and local extension before relying on it.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "fixer": {
+     "status": "heuristic",
+     "source": "General agronomy knowledge (legumes fix nitrogen via rhizobia). Not cited to a specific page.",
+     "url": "https://ecocrop.apps.fao.org/ecocrop/srv/en/home"
+    },
+    "kc": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    },
+    "stage_fraction": {
+     "status": "heuristic",
+     "source": "Value recalled from FAO-56 Table 12 (Kc) / Table 11 (stage lengths); NOT re-verified in v0.7, so it stays heuristic. Where FAO prints a range the midpoint is used.",
+     "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+    }
+   },
+   "perennial": true
+  }
+ ]
+}

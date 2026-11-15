@@ -1,0 +1,1 @@
+Superseded by **DEPLOY.md** (v0.7). Backup/rollback notes from v0.6: SQLite backup `sqlite3.connect(db).backup(other)` while running; migrations have `down` steps (`app.db.migrations.migrate(con, target)`).

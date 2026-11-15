@@ -1,0 +1,18 @@
+/* AI-assisted: written with an AI coding assistant (see README, "AI tools used"). */
+/* generated from FieldShift v0.4 app.js by the v1.0 module split; edited by hand afterwards */
+import { html, setHtml } from "../lib/html.js";
+import { $, S, active, fmtArea, topCrop } from "../lib/state.js";
+import { conditions, cropThumb, heroSvg, metric, polySvg } from "./widgets.js";
+import { dashboardHtml, hydrateDashboard } from "./dashboard.js";
+
+export function renderOverview() {
+    const total = S.fields.reduce((s, f) => s + (f.area_ha || 0), 0), a = active(), best = topCrop(a);
+    const hero = html`<section class="hero glass"><div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span> CLIMATE-SMART FARMING</div><h1>Hello, ${S.settings.name || "farmer"} ✳</h1><p>Your fields, conditions and next steps at a glance – powered by NASA Earth observations.</p><a class="button button-dark" href="#studio" data-ic="plus">${S.fields.length ? "Add a field" : "Start in Field studio"}</a></div><div class="hero-art">${heroSvg()}</div></section>`;
+    if (!S.fields.length) { setHtml($("overviewBody"), html`${hero}${html`<div class="empty"><h3>Let's add your first field</h3><p>Open the Field studio, find your land on the 3D globe, outline it, give it a name and press Analyze.</p><a class="button button-dark" href="#studio">Open Field studio</a></div>`}`); return; }
+    setHtml($("overviewBody"), html`${hero}${html`<section class="metrics-grid">${metric("SAVED FIELDS", S.fields.length, "In your workspace", "green", "layers")}${metric("TOTAL AREA", fmtArea(total), "All saved fields", "aqua", "globe")}${metric("ACTIVE FIELD", a?.name || "—", a ? "Selected in the top bar" : "None selected", "amber", "pin", a?.geometry ? html`<div class="metric-thumb field-art" style="height:58px;min-height:0">${polySvg(a.geometry)}</div>` : "")}${metric("TOP CROP MATCH", best ? best.crop.name : "—", best ? best.score + "/100 fit" : "Analyze a field", "lime", "sprout", best ? cropThumb(best.crop, "metric-thumb") : "")}</section>
+    ${a?.analysis ? html`<div class="panel-heading" style="margin:6px 4px 10px"><div><div class="panel-kicker">ACTIVE FIELD</div><h3>${a.name} · current conditions</h3></div><a class="button button-light button-compact" href="#field">Open field</a></div>${conditions(a)}` : ""}
+    <div class="two"><article class="panel"><div class="panel-heading"><div><div class="panel-kicker">YOUR LAND</div><h3>Fields at a glance</h3></div><a class="button button-light button-compact" href="#fields">All fields</a></div>${S.fields.slice(0, 5).map((f) => { const t = topCrop(f); return html`<div class="mini-crop"><span class="grow">${t ? cropThumb(t.crop) : ""}<span><strong>${f.name}</strong> · ${fmtArea(f.area_ha)}</span></span><span>${t ? t.crop.name + " · " + t.score : "Not analyzed"}</span></div>`; })}</article>
+    <div class="stack"><article class="panel"><div class="panel-kicker">NEXT SEASONS</div><h3>Rotation preview</h3>${(a?.analysis?.rotation || []).slice(0, 4).map((r) => html`<div class="mini-crop" data-open-crop="${r.id}" role="link" tabindex="0" style="cursor:pointer"><span class="grow">${cropThumb({ id: r.id, family: r.family, name: r.crop })}<span>Season ${r.season}</span></span><strong>${r.crop}</strong></div>`) || html`<p class="note">Analyze the active field to see a plan.</p>`}</article>
+    <article class="panel"><div class="panel-kicker">THIS WEEK</div><h3>Land management</h3>${(a?.analysis?.management || []).slice(0, 3).map((m) => html`<div class="mini-crop"><span>${m.title}</span><span class="badge ${m.priority}">${m.priority.toUpperCase()}</span></div>`) || html`<p class="note">No advice yet.</p>`}</article></div></div>${dashboardHtml(a)}`}`);
+    hydrateDashboard();
+  }

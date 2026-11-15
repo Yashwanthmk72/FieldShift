@@ -1,0 +1,432 @@
+{
+ "maize": {
+  "issues": [
+   "Fall armyworm",
+   "Stem borers",
+   "Maize streak virus",
+   "Grey leaf spot"
+  ],
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment."
+ },
+ "sorghum": {
+  "issues": [
+   "Sorghum midge",
+   "Shoot fly",
+   "Stem borers",
+   "Birds at grain fill",
+   "Striga (witchweed) in parts of Africa"
+  ],
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment."
+ },
+ "millet": {
+  "issues": [
+   "Downy mildew",
+   "Head miner",
+   "Birds",
+   "Striga"
+  ],
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment."
+ },
+ "soybean": {
+  "issues": [
+   "Soybean rust",
+   "Pod-sucking bugs",
+   "Aphids",
+   "Cyst nematode"
+  ],
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment."
+ },
+ "cowpea": {
+  "issues": [
+   "Aphids",
+   "Pod borers (Maruca)",
+   "Thrips",
+   "Bruchid weevils in storage"
+  ],
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment."
+ },
+ "rice": {
+  "issues": [
+   "Rice blast",
+   "Brown planthopper",
+   "Stem borers",
+   "Bacterial leaf blight"
+  ],
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment."
+ },
+ "groundnut": {
+  "issues": [
+   "Leaf spot",
+   "Aflatoxin (storage mould)",
+   "Aphids",
+   "Termites in dry soils"
+  ],
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment."
+ },
+ "chickpea": {
+  "issues": [
+   "Ascochyta blight",
+   "Fusarium wilt",
+   "Pod borer (Helicoverpa)"
+  ],
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment."
+ },
+ "wheat": {
+  "issues": [
+   "Rusts (stripe, leaf, stem)",
+   "Aphids",
+   "Fusarium head blight",
+   "Septoria"
+  ],
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment."
+ },
+ "potato": {
+  "issues": [
+   "Late blight",
+   "Potato beetle / tuber moth",
+   "Bacterial wilt",
+   "Nematodes"
+  ],
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment."
+ },
+ "sunflower": {
+  "issues": [
+   "Head moth / head-boring caterpillars",
+   "Downy mildew",
+   "Sclerotinia head rot",
+   "Birds"
+  ],
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment."
+ },
+ "barley": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Aphids",
+   "Powdery mildew",
+   "Net blotch",
+   "Rusts"
+  ]
+ },
+ "cassava": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Cassava mosaic disease",
+   "Cassava brown streak disease",
+   "Mealybugs",
+   "Green mites"
+  ]
+ },
+ "sweet_potato": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Sweet potato weevil",
+   "Virus complex",
+   "Vine borers"
+  ]
+ },
+ "lentil": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Aphids",
+   "Ascochyta blight",
+   "Fusarium wilt",
+   "Pod borers"
+  ]
+ },
+ "pigeonpea": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Pod borers (Helicoverpa)",
+   "Pod fly",
+   "Fusarium wilt",
+   "Sterility mosaic disease"
+  ]
+ },
+ "mungbean": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Whitefly (yellow mosaic virus)",
+   "Aphids",
+   "Pod borers",
+   "Powdery mildew"
+  ]
+ },
+ "mustard": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Aphids",
+   "Flea beetles",
+   "Alternaria blight",
+   "White rust"
+  ]
+ },
+ "sesame": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Leaf webber and capsule borer",
+   "Phyllody disease",
+   "Leaf spots"
+  ]
+ },
+ "tomato": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Late blight and early blight",
+   "Whitefly and leaf-curl virus",
+   "Fruit borers",
+   "Bacterial wilt"
+  ]
+ },
+ "onion": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Thrips",
+   "Purple blotch",
+   "Downy mildew",
+   "Onion fly"
+  ]
+ },
+ "okra": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Fruit and shoot borer",
+   "Whitefly (yellow vein mosaic)",
+   "Jassids",
+   "Powdery mildew"
+  ]
+ },
+ "chili": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Thrips and mites",
+   "Leaf-curl virus",
+   "Anthracnose",
+   "Bacterial wilt"
+  ]
+ },
+ "watermelon": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Aphids",
+   "Fruit flies",
+   "Fusarium wilt",
+   "Powdery and downy mildew"
+  ]
+ },
+ "cotton": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Bollworms",
+   "Whitefly",
+   "Aphids",
+   "Pink bollworm"
+  ]
+ },
+ "sugarcane": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Stem borers",
+   "Red rot",
+   "Smut",
+   "Termites"
+  ]
+ },
+ "banana": {
+  "source": "FieldShift general guidance compiled in v0.4; NOT independently verified",
+  "status": "unreviewed",
+  "verify_with": [
+   "CABI PlantwisePlus Knowledge Bank",
+   "FAO crop and pest guides",
+   "local extension service"
+  ],
+  "note": "General guidance, not a diagnosis. Follow local label and regulations for any treatment.",
+  "issues": [
+   "Black sigatoka",
+   "Panama disease (Fusarium TR4 in some regions)",
+   "Banana weevil",
+   "Nematodes"
+  ]
+ }
+}

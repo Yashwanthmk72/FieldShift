@@ -1,0 +1,32 @@
+{
+ "_note": "Maps FieldShift crop ids to real price series. FRED series ids were checked against FRED pages on 2026-11-14 (wheat, maize, soybean, rice, cotton, sugar). Agmarknet commodity names are written from memory of the data.gov.in dataset and are NOT verified: a wrong name returns no records and the UI shows 'no data'. A crop missing from a provider has no source there.",
+ "imf_fred": {
+  "wheat":   {"series": "PWHEAMTUSDM", "title": "Global price of Wheat (US No.1 Hard Red Winter, FOB Gulf of Mexico)", "unit": "tonne", "scale": 1},
+  "maize":   {"series": "PMAIZMTUSDM", "title": "Global price of Corn / maize (US No.2 Yellow, FOB Gulf of Mexico)", "unit": "tonne", "scale": 1},
+  "soybean": {"series": "PSOYBUSDM", "title": "Global price of Soybeans", "unit": "tonne", "scale": 1},
+  "rice":    {"series": "PRICENPQUSDM", "title": "Global price of Rice, Thailand", "unit": "tonne", "scale": 1},
+  "cotton":  {"series": "PCOTTINDUSDM", "title": "Global price of Cotton (published in US cents per pound)", "unit": "lb", "scale": 0.01},
+  "sugarcane": {"series": "PSUGAISAUSDM", "title": "Global price of Sugar, No. 11, World (published in US cents per pound)", "unit": "lb", "scale": 0.01, "proxy": "This is the price of raw SUGAR, not of sugarcane. Cane prices are set locally."}
+ },
+ "agmarknet": {
+  "wheat": "Wheat", "rice": "Paddy(Dhan)(Common)", "maize": "Maize", "sorghum": "Jowar(Sorghum)", "millet": "Bajra(Pearl Millet/Cumbu)", "soybean": "Soyabean",
+  "groundnut": "Groundnut", "chickpea": "Bengal Gram(Gram)(Whole)", "potato": "Potato", "sunflower": "Sunflower", "barley": "Barley (Jau)", "cassava": "Tapioca",
+  "lentil": "Lentil (Masur)(Whole)", "pigeonpea": "Arhar (Tur/Red Gram)(Whole)", "mungbean": "Green Gram (Moong)(Whole)", "mustard": "Mustard",
+  "sesame": "Sesamum(Sesame,Gingelly,Til)", "tomato": "Tomato", "onion": "Onion", "okra": "Bhindi(Ladies Finger)", "chili": "Green Chilli", "watermelon": "Water Melon",
+  "cotton": "Cotton", "banana": "Banana", "cowpea": "Cowpea(Lobia/Karamani)"
+ },
+ "countries": {
+  "WORLD": {"name": "World (benchmark export prices)", "currency": "USD"},
+  "IN": {"name": "India", "currency": "INR"},
+  "US": {"name": "United States", "currency": "USD"},
+  "BR": {"name": "Brazil", "currency": "BRL"},
+  "KE": {"name": "Kenya", "currency": "KES"},
+  "NG": {"name": "Nigeria", "currency": "NGN"},
+  "ET": {"name": "Ethiopia", "currency": "ETB"},
+  "TZ": {"name": "Tanzania", "currency": "TZS"},
+  "PK": {"name": "Pakistan", "currency": "PKR"},
+  "BD": {"name": "Bangladesh", "currency": "BDT"},
+  "ID": {"name": "Indonesia", "currency": "IDR"},
+  "MX": {"name": "Mexico", "currency": "MXN"}
+ }
+}

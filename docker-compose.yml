@@ -1,0 +1,19 @@
+# Local prod-like run. NOTE (v0.6): the application's database layer is SQLite; the postgres service below is provisioned
+# for the planned SQLAlchemy/PostgreSQL migration and is NOT used yet. See KNOWN_LIMITATIONS.md.
+services:
+  api:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      FIELDSHIFT_ENV: production
+      FIELDSHIFT_SECRET_KEY: ${FIELDSHIFT_SECRET_KEY:?set a 32+ character secret}
+      FIELDSHIFT_COOKIE_SECURE: "true"
+      FIELDSHIFT_CORS_ORIGINS: ${FIELDSHIFT_CORS_ORIGINS:-http://localhost:8000}
+      TRUSTED_PROXIES: ${TRUSTED_PROXIES:-}
+    volumes: ["fsdata:/data"]
+  postgres:
+    image: postgres:16-alpine
+    profiles: ["future"]
+    environment: { POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-change-me}", POSTGRES_DB: fieldshift }
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+volumes: { fsdata: {}, pgdata: {} }

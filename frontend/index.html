@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-pref="system">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef6ee"><meta name="description" content="FieldShift helps farmers explore climate-aware crop choices and resilient rotations using NASA Earth observations.">
+  <title>FieldShift — resilient farming, in focus</title>
+  <!-- AI-assisted: AI assistants helped write this application. See README "AI tools used". -->
+  <script>
+    /* Resolve the theme before first paint so there is no light/dark flash. */
+    (function () {
+      try {
+        var s = JSON.parse(localStorage.getItem("fs-settings") || "{}");
+        var pref = localStorage.getItem("fs-theme") || s.theme || "system";
+        var dark = pref === "dark" || (pref === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.pref = pref;
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+        var g = Number(s.glow); if (g >= 0 && g <= 100) document.documentElement.style.setProperty("--glow-k", g / 100);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="grain"></i></div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <aside class="sidebar glass" aria-label="Main navigation">
+    <a class="brand" href="#overview"><span class="brand-mark" id="brandMark"></span><span class="brand-text">field<span class="brand-accent">shift</span><small>FARM INTELLIGENCE</small></span></a>
+    <div class="nav-label">WORKSPACE</div>
+    <nav class="nav-list">
+      <a class="nav-item" href="#overview" data-view="overview" data-ic="grid"><span class="lbl">Overview</span></a>
+      <a class="nav-item" href="#studio" data-view="studio" data-ic="compass"><span class="lbl">Field studio</span></a>
+      <a class="nav-item" href="#fields" data-view="fields" data-ic="layers"><span class="lbl">My fields</span> <b class="nav-count" id="fieldCount">0</b></a>
+      <a class="nav-item" href="#market" data-view="market" data-ic="sparkle"><span class="lbl">Market prices</span></a>
+    </nav>
+    <div class="nav-label side-gap" id="activeLabel">ACTIVE FIELD</div>
+    <nav class="nav-list">
+      <a class="nav-item" href="#field" data-view="field" data-ic="leaf"><span class="lbl">Field overview</span></a>
+      <a class="nav-item" href="#weather" data-view="weather" data-ic="cloud"><span class="lbl">Weather</span></a>
+      <a class="nav-item" href="#climate" data-view="climate" data-ic="sun"><span class="lbl">Climate</span></a>
+      <a class="nav-item" href="#crops" data-view="crops" data-ic="sprout"><span class="lbl">Crop advisor</span></a>
+      <a class="nav-item" href="#irrigation" data-view="irrigation" data-ic="droplet"><span class="lbl">Irrigation</span></a>
+      <a class="nav-item" href="#soilhealth" data-view="soilhealth" data-ic="layers"><span class="lbl">Soil health</span></a>
+      <a class="nav-item" href="#pests" data-view="pests" data-ic="flask"><span class="lbl">Pests &amp; disease</span></a>
+      <a class="nav-item" href="#finance" data-view="finance" data-ic="tag"><span class="lbl">Finance</span></a>
+      <a class="nav-item nav-secondary" href="#rotation" data-view="rotation" data-ic="refresh"><span class="lbl">Crop rotation</span></a>
+      <a class="nav-item nav-secondary" href="#management" data-view="management" data-ic="clipboard"><span class="lbl">Land management</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <nav class="nav-list"><a class="nav-item nav-secondary" href="#accuracy" data-view="accuracy" data-ic="info"><span class="lbl">How accurate is this?</span></a><a class="nav-item nav-secondary" href="#credits" data-view="credits" data-ic="layers"><span class="lbl">Data sources &amp; credits</span></a><a class="nav-item" href="#settings" data-view="settings" data-ic="sliders"><span class="lbl">Settings</span></a></nav>
+      <div class="data-status"><span class="live-dot" id="statusDot"></span><span><strong id="statusText">Checking backend…</strong><small>NASA POWER · SoilGrids</small></span></div>
+    </div>
+  </aside>
+
+  <main class="main-shell" id="main">
+    <header class="topbar glass">
+      <div class="crumb"><span>Workspace</span><span class="slash">/</span><strong id="pageCrumb">Overview</strong></div>
+      <div class="top-actions">
+        <label class="picker"><span>ACTIVE FIELD</span> <select id="fieldPicker" aria-label="Active field"></select></label>
+        <div class="seg theme-seg" role="group" aria-label="Colour theme">
+          <button data-theme-pref="light" aria-label="Light theme" title="Light"></button>
+          <button data-theme-pref="dark" aria-label="Dark theme" title="Dark"></button>
+          <button data-theme-pref="system" aria-label="Match system theme" title="System"></button>
+        </div>
+        <a class="button button-dark" href="#studio" id="newFieldBtn"></a>
+      </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="view" id="v-overview"><div id="overviewBody"></div></section>
+
+    <!-- FIELD STUDIO -->
+    <section class="view" id="v-studio">
+      <div class="view-head"><div><div class="eyebrow"><span class="eyebrow-line"></span> FIELD STUDIO</div><h1>Find, select and analyze your land</h1><p>Spin the globe, zoom to your farm, outline the area, then run the analysis.</p></div></div>
+      <div class="studio">
+        <div class="studio-side">
+          <div class="panel step"><span class="step-n">1</span><div class="step-body"><h4>Find your land</h4><div class="search-box"><input id="placeSearch" placeholder="Search a village, farm or address…" aria-label="Search a place"><button id="searchBtn" class="button button-dark">Go</button></div><div class="row"><button id="locateBtn" class="button button-light button-compact" data-ic="locate">My location</button><button id="uploadGeo" class="button button-light button-compact" data-ic="upload">GeoJSON</button><input id="geoFile" type="file" accept=".json,.geojson" hidden></div>
+            <details class="coords"><summary>Go to coordinates</summary><div class="search-box"><input id="coordInput" placeholder="e.g. 12.97, 77.59" aria-label="Latitude, longitude"><button id="coordBtn" class="button button-light">Go</button></div></details></div></div>
+          <div class="panel step"><span class="step-n">2</span><div class="step-body"><h4>Select the area</h4><p class="hint" id="drawHint">Press “Start drawing”, then click the map to place each corner of your field.</p><div class="row"><button id="drawBtn" class="button button-dark button-compact" data-ic="pen">Start drawing</button><button id="finishBtn" class="button button-light button-compact" data-ic="check" disabled>Finish</button><button id="undoBtn" class="button button-light button-compact" data-ic="undo" disabled>Undo</button><button id="clearBtn" class="button button-light button-compact" data-ic="eraser">Clear</button></div><div class="readout" id="areaReadout">No area selected yet</div></div></div>
+          <div class="panel step"><span class="step-n">3</span><div class="step-body"><h4>Name &amp; analyze</h4><input id="fieldName" class="text-input" placeholder="Field name, e.g. North paddock" maxlength="80" aria-label="Field name"><button id="analyzeBtn" class="button button-dark wide" data-ic="zap" disabled>Analyze this area</button></div></div>
+          <div class="panel" id="analysisBox" hidden></div>
+        </div>
+        <div class="map-wrap"><div id="map"></div>
+          <div class="map-ctl glass" role="group" aria-label="Map layers"><button data-style="satellite" class="on">Satellite</button><button data-style="streets">Streets</button><button id="labelsBtn" class="on" data-ic="tag" aria-pressed="true">Labels</button><button id="globeBtn" class="on" data-ic="globe" aria-pressed="true">Globe</button><button id="terrainBtn" data-ic="mountain" aria-pressed="false">3D</button><button id="worldBtn" data-ic="compass">World</button></div>
+          <div class="place-chip glass" id="placeChip" aria-live="polite"><div class="place-main" id="placeMain">Move the globe to see where you are</div><div class="place-sub" id="placeSub"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY FIELDS -->
+    <section class="view" id="v-fields"><div id="fieldsHead"></div><div id="fieldsBody"></div></section>
+
+    <!-- ACTIVE FIELD VIEWS -->
+    <section class="view" id="v-field"><div id="tabs-field"></div><div id="fieldBody"></div></section>
+    <section class="view" id="v-climate"><div id="tabs-climate"></div><div id="climateBody"></div></section>
+    <section class="view" id="v-weather"><div id="tabs-weather"></div><div id="weatherBody"></div></section>
+    <section class="view" id="v-irrigation"><div id="tabs-irrigation"></div><div id="irrigationBody"></div></section>
+    <section class="view" id="v-soilhealth"><div id="tabs-soilhealth"></div><div id="soilhealthBody"></div></section>
+    <section class="view" id="v-pests"><div id="tabs-pests"></div><div id="pestsBody"></div></section>
+    <section class="view" id="v-finance"><div id="tabs-finance"></div><div id="financeBody"></div></section>
+    <section class="view" id="v-crops"><div id="tabs-crops"></div><div id="cropsBody"></div></section>
+    <section class="view" id="v-rotation"><div id="tabs-rotation"></div><div id="rotationBody"></div></section>
+    <section class="view" id="v-management"><div id="tabs-management"></div><div id="managementBody"></div></section>
+    <section class="view" id="v-crop"><div id="cropDetail"></div></section>
+
+    <section class="view" id="v-market"><div id="marketHead"></div><div id="marketBody"></div></section>
+    <section class="view" id="v-accuracy"><div id="accuracyBody"></div></section>
+    <section class="view" id="v-credits"><div id="creditsBody"></div></section>
+
+    <!-- SETTINGS -->
+    <section class="view" id="v-settings"><div class="view-head"><div><div class="eyebrow"><span class="eyebrow-line"></span> PREFERENCES</div><h1>Settings</h1><p>Personalize FieldShift. Saved in this browser and synced to the backend when connected.</p></div><button id="saveSettings" class="button button-dark" data-ic="save">Save settings</button></div><div id="settingsBody" class="set-grid"></div></section>
+
+    <footer class="footer"><span>FieldShift <span class="footer-dot">·</span> A climate-smart farming project · v0.9</span><span>Data: NASA POWER · ISRIC SoilGrids · IMF/FRED · Agmarknet · ECB · Esri · OpenStreetMap · Wikimedia Commons · <a href="#credits">Credits</a></span><span><strong>AI tools used:</strong> AI assistants helped write this code and content; generated illustrations are marked. Not affiliated with or endorsed by NASA. Planning support only; consult local experts.</span></footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="fieldDialog" class="dialog glass"><form method="dialog" id="fieldForm"><button class="dialog-close" value="cancel" aria-label="Close">×</button><div class="panel-kicker">FIELD DETAILS</div><h3>Name your field</h3><label>Field name<input name="name" required maxlength="80"></label><label>Notes (optional)<input name="notes" maxlength="300" placeholder="Soil, water source, history…"></label><div class="dialog-actions"><button class="button button-light" value="cancel">Cancel</button><button class="button button-dark" value="ok">Save</button></div></form></dialog>
+  <dialog id="infoDialog" class="dialog glass"><form method="dialog"><button class="dialog-close" aria-label="Close">×</button><div class="panel-kicker" id="infoKicker"></div><h3 id="infoTitle"></h3><div id="infoBody" class="info-body"></div><div class="ai-mode" id="infoFoot"></div><button class="button button-dark">Got it</button></form></dialog>
+
+  <script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+  <script src="config.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

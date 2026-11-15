@@ -1,0 +1,9 @@
+.git
+.venv
+__pycache__
+*.py[cod]
+.env
+backend/fieldshift.db
+backend/models/*.joblib
+backend/data/training_examples.csv
+outputs

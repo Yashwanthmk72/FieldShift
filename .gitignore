@@ -1,0 +1,43 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+backend/fieldshift.db
+backend/models/*.joblib
+backend/data/training_examples.csv
+outputs/
+.DS_Store
+
+# Python environments and cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Node dependencies
+node_modules/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+playwright-report/
+test-results/
+
+# Build files
+dist/
+build/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# System files
+.DS_Store
+Thumbs.db

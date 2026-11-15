@@ -1,0 +1,29 @@
+# Fly.io config: one Docker service. NOT deployed or tested by the author. Change `app` to a unique name.
+app = "fieldshift-change-me"
+primary_region = "sin"
+
+[build]
+
+[env]
+  FIELDSHIFT_ENV = "production"
+  FIELDSHIFT_COOKIE_SECURE = "true"
+  FIELDSHIFT_DB = "/data/fieldshift.db"
+  FIELDSHIFT_CORS_ORIGINS = "https://fieldshift-change-me.fly.dev"
+  PORT = "8000"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = "stop"      # free/low-cost machines stop when idle and cold-start on the next request
+  auto_start_machines = true
+  min_machines_running = 0
+  [[http_service.checks]]
+    method = "GET"
+    path = "/readyz"
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "15s"
+
+[mounts]
+  source = "fieldshift_data"       # a Fly volume keeps SQLite across restarts (create it first; volumes are not free)
+  destination = "/data"
