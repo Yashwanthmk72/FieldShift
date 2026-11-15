@@ -1,4 +1,4 @@
-# FieldShift
+# Project Earthwise
 
 **Climate-aware crop-planning decision support, informed by NASA data.**
 
