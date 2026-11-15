@@ -16,8 +16,6 @@ FieldShift helps a user explore a farm field, review climate and soil context, c
 
 > **Preview note:** These repository screenshots are interface previews and may show fixture or demonstration data. They are not proof that live provider data is currently available. The screenshots were captured before the 0.9.0 release and may show an older footer version. Replace them with fresh screenshots from the deployed 0.9.0 app when available.
 
-![FieldShift dashboard preview with fixture data](docs/screenshots/desk-overview.png)
-
 *Dashboard and field overview preview. Replace with an up-to-date screenshot from the live app.*
 
 ![FieldShift climate view preview with fixture data](docs/screenshots/desk-weather.png)
